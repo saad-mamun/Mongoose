@@ -10,7 +10,7 @@ const port = 3000;
 
 app.get("/", (req, res) => {
   const todo = new Todo({
-    title: "My first todo",
+    title : "My first todo",
     desc: "This is the description",
     isDone: false,
     days: 3,
@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 
 
-app.get("/a", async (req, res) => {
+app.get("/a", async  (req, res) => {
  const todos = await Todo.findOne();
  res.json({title: todos.title, desc: todos.desc});
 });
